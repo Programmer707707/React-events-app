@@ -1,0 +1,26 @@
+1. React framework composed of components. 
+2. All the elements that is given with <> </> are considered as react fragments. 
+3. And if react fragment does not contain props such as parameters it is not necessary to include <React.Fragment> </React.Fragment>
+but if it contains props such as parameters it is necessary to include <React.Fragment> </React.Fragment>. 
+4. <div> </div> are also react fragments.
+5. This is children props (h2,p,a): 
+        <Modal>
+            <h2>Terms & Conditions</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem esse explicabo, suscipit fuga incidunt nam maxime voluptatem alias blanditiis placeat eius numquam facere mollitia sed? Eum fugiat corrupti id repudiandae!</p>
+            <a href="google.com">read more...</a>
+        </Modal>
+
+        and we can include them: 
+
+        export default function Modal(props) {
+        return (
+            <div className="modal-backdrop">
+                <div className="modal">
+                    {props.children} // <- inlcuding all props at once.
+                </div>
+            </div>
+                )
+        }
+
+6. ReactDOM.createPortal (portals) is a method provided by React that allows you to render a React component at a different place in the DOM tree than where it is defined in the component hierarchy.
+7. Note that not only index.css or App.css are global, but also other component specific stylesheets are also global. 
